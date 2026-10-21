@@ -1,8 +1,9 @@
 from src.data_loader import fetch_price_data
 from src.returns import log_returns,simple_returns
-from src.metrics import mean_log_return, std_log_return,skewness,kurtosis,sharpe_ratio,sortino_ratio
-
-
+from src.metrics import mean_log_return, std_log_return,skewness,kurtosis,sharpe_ratio,sortino_ratio,MDD,value_at_risk_historical,value_at_risk_parametrical,expected_shortfall
+from src.visualization import drawdown_plot
+import matplotlib.pyplot as plt
+plt.ioff()
 def main():
     tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA']
     start_date = '2023-01-01'
@@ -42,6 +43,24 @@ def main():
     print("---Sortino_ratio---")
     sortino = sortino_ratio(simple_ret)
     print(sortino)
+
+    print("---Maximum Drawdown---")
+    maxdrawdown = MDD(prices)
+    print(maxdrawdown)
+
+    drawdown_plt = drawdown_plot(prices)
+
+    print("---Value at Risk Historical---")
+    historical_var = value_at_risk_historical(returns)
+    print(historical_var)
+
+    print("---Value at Risk Parametric---")
+    parametric_var = value_at_risk_parametrical(returns)
+    print(parametric_var)
+
+    print("---Expected Shortfall--")
+    es = expected_shortfall(returns,historical_var)
+    print(es)
 
 if __name__ == "__main__":
     main()
