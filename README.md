@@ -11,3 +11,5 @@ A modular Python framework for computing asset-level and portfolio-level market 
 ## Visualizations
 ### Underwater Plot
 ![Underwater Plot](assets/underwater_plot.png)
+### KDE Plot + VAR & CVAR 
+![Portfolio Return Distribution](assets/kde_plot.png)
