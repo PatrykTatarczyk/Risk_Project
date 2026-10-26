@@ -26,7 +26,6 @@ def sortino_ratio(df,risk_free_rate = 0.04198, trading_days = 252):
     diff = df - daily_rf
     diff = diff.clip(upper=0)
     diff = diff**2
-    print(diff)
     dd = np.sqrt(diff.sum()/len(diff))
     return (((df.mean()) - daily_rf) / dd) * np.sqrt(trading_days)
 

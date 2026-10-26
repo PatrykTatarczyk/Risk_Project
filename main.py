@@ -1,10 +1,11 @@
 from src.data_loader import fetch_price_data
 from src.returns import log_returns,simple_returns
 from src.metrics import mean_log_return, std_log_return,skewness,kurtosis,sharpe_ratio,sortino_ratio,MDD,value_at_risk_historical,value_at_risk_parametrical,expected_shortfall
-from src.visualization import drawdown_plot,kde_plot
-from src.portfolio import optimization,optimized_returns
+from src.visualization import drawdown_plot,kde_plot,effective_frontier
+from src.portfolio import optimization,optimized_returns,monte_carlo_simulation
 import matplotlib.pyplot as plt
 import numpy as np
+
 plt.ioff()
 
 def main():
@@ -75,6 +76,14 @@ def main():
     optimized_return = optimized_returns(simple_ret,optimized)
     print(f"optimized_return: {round(optimized_return,2)*100}%")
     print(f"non_optimized_return: {round(optimized_returns(simple_ret,np.ones(5)/5) )* 100}%")
+
+
+    print("---Monte Carlo Simulation---")
+    sim = monte_carlo_simulation(simple_ret)
+    print(sim)
+
+    eff_front = effective_frontier(sim)
+
 
 if __name__ == "__main__":
     main()

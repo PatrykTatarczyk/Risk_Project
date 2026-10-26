@@ -13,3 +13,5 @@ A modular Python framework for computing asset-level and portfolio-level market 
 ![Underwater Plot](assets/underwater_plot.png)
 ### KDE Plot + VAR & CVAR 
 ![Portfolio Return Distribution](assets/kde_plot.png)
+## 📊 Markowitz Efficient Frontier (Monte Carlo Simulation)
+![Efficient Frontier](assets/effective_frontier.png)
