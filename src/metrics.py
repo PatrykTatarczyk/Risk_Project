@@ -45,3 +45,19 @@ def value_at_risk_parametrical(df,confidence_interval=0.95):
 def expected_shortfall(df,historical_var):
     tail_returns = df[df < -historical_var]
     return tail_returns.mean() * -1
+
+
+def portfolio_var_parametrical(returns_df, confidence_interval, weights):
+    w = np.array(weights)
+    means = returns_df.mean()
+    cov = returns_df.cov()
+    weighted_means = w @ means
+    weighted_variance = w.T @ cov @ w
+    z = stats.norm.ppf(confidence_interval)
+    return z * np.sqrt(weighted_variance) - weighted_means
+
+
+def portfolio_var_historical(returns_df, confidence_interval, weights):
+    w = np.array(weights)
+    portfolio_returns = returns_df @ w
+    return portfolio_returns.quantile(1 - confidence_interval) * -1

@@ -1,7 +1,9 @@
 import yfinance as yf
 import pandas as pd
 from typing import List
+import streamlit as st
 
+@st.cache_data
 def fetch_price_data(tickers: List[str], start_date: str, end_date: str) -> pd.DataFrame:
     data = yf.download(tickers, start=start_date, end=end_date)['Close']
     if isinstance(data, pd.Series):
