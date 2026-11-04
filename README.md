@@ -11,9 +11,6 @@ pip install -r requirements.txt
 
 ## 🖼️ Visualizations
 
-### 📊 Streamlit Interactive Dashboard
-![Dashboard Preview](assets/dashboard_preview.png)
-
 ### 🌊 Underwater Plot (Max Drawdown)
 ![Underwater Plot](assets/underwater_plot.png)
 
