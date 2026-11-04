@@ -1,17 +1,24 @@
-# Market Risk Analysis Tool
+# Market Risk Analysis & Analytics Engine
 
-A modular Python framework for computing asset-level and portfolio-level market risk metrics.
+A modular Python framework and interactive dashboard for computing asset-level and portfolio-level market risk metrics, portfolio optimization, and tail risk visualization.
 
-## Features & Implemented Metrics
-- **Risk-Adjusted Performance:** Sharpe Ratio, Sortino Ratio
-- **Drawdown Analysis:** Maximum Drawdown (MDD) with Underwater Plot visualization
-- **Value at Risk (VaR):** Historical VaR (95%) & Parametric VaR (Normal Distribution)
-- **Tail Risk:** Historical Expected Shortfall (CVaR)
+## 🚀 Interactive Streamlit Dashboard
+Run the dashboard locally to analyze custom stock tickers, adjust confidence intervals, and configure portfolio weights in real-time:
 
-## Visualizations
-### Underwater Plot
+```bash
+pip install -r requirements.txt
+```
+
+## 🖼️ Visualizations
+
+### 📊 Streamlit Interactive Dashboard
+![Dashboard Preview](assets/dashboard_preview.png)
+
+### 🌊 Underwater Plot (Max Drawdown)
 ![Underwater Plot](assets/underwater_plot.png)
-### KDE Plot + VAR & CVAR 
+
+### 📉 Return Density & Tail Risk (KDE Plot + VaR & CVaR)
 ![Portfolio Return Distribution](assets/kde_plot.png)
-## 📊 Markowitz Efficient Frontier (Monte Carlo Simulation)
+
+### 🎯 Markowitz Efficient Frontier (Monte Carlo Simulation)
 ![Efficient Frontier](assets/effective_frontier.png)
