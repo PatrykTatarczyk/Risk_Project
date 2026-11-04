@@ -19,3 +19,6 @@ pip install -r requirements.txt
 
 ### 🎯 Markowitz Efficient Frontier (Monte Carlo Simulation)
 ![Efficient Frontier](assets/effective_frontier.png)
+
+## 🚀 Live Demo
+You can check the app here: [Risk Analytics Dashboard](https://riskproject-ewjyufmpw9jfvsbguugvxj.streamlit.app)
