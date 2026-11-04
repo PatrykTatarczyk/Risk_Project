@@ -2,6 +2,9 @@
 
 A modular Python framework and interactive dashboard for computing asset-level and portfolio-level market risk metrics, portfolio optimization, and tail risk visualization.
 
+## 🚀 Live Demo
+You can check the app here: [Risk Analytics Dashboard](https://riskproject-ewjyufmpw9jfvsbguugvxj.streamlit.app)
+
 ## 🚀 Interactive Streamlit Dashboard
 Run the dashboard locally to analyze custom stock tickers, adjust confidence intervals, and configure portfolio weights in real-time:
 
@@ -20,5 +23,3 @@ pip install -r requirements.txt
 ### 🎯 Markowitz Efficient Frontier (Monte Carlo Simulation)
 ![Efficient Frontier](assets/effective_frontier.png)
 
-## 🚀 Live Demo
-You can check the app here: [Risk Analytics Dashboard](https://riskproject-ewjyufmpw9jfvsbguugvxj.streamlit.app)
